@@ -28,19 +28,16 @@ const Charts = props => {
         (props.scenarioSelection.showDifference === true &&
           selectedScenario2 === "")) && (
         <Flex>
-          <StackedBarChart
+
+		            <StackedBarChart
             chartName="_CO2 emissioner"
-            chartTitle="CO2 emissioner og %-reduktion"
+            chartTitle="CO2 emissioner"
             selectedScenario={selectedScenario}
             selectedScenario2={selectedScenario2}
-            combinedChart={true}
-            label="Kt"
+            combinedChart={false}
+            label="kt CO2"
             minY={0}
             maxY={40000}
-            minY2={0}
-            maxY2={1}
-            label2="CO2 reduktion (1990)"
-            Y2Percentage={true}
             stackedBar={stackedBar}
             line={line}
           />
@@ -56,36 +53,15 @@ const Charts = props => {
             stackedBar={stackedBar}
             line={line}
           />
-          <StackedBarChart
+		            <StackedBarChart
             chartName="_All_GHG_emissions"
             chartTitle="Alle Danske drivhusgasser"
             selectedScenario={selectedScenario}
             selectedScenario2={selectedScenario2}
-            combinedChart={true}
-            label="Kt CO2e"
-            minY={-10000}
-            maxY={70000}
-            minY2={0}
-            maxY2={1}
-            label2="Drivhusgas reduktion (1990)"
-            Y2Percentage={true}
-            stackedBar={stackedBar}
-            line={line}
-          />
-          <ComparisonChart
-            chartName="_CO2 emissioner akkumuleret"
-            chartTitle="Akkumuleret CO2 emissioner"
-            showCCS={props.scenarioSelection.showCCS}
-            showBio={props.scenarioSelection.showBio}
-            selectedScenario={selectedScenario}
-            selectedScenario2={selectedScenario2}
-            combinedChart={true}
-            label="Mt"
+            combinedChart={false}
+            label="kt CO2e"
             minY={0}
-            maxY={1200000}
-            minY2={0}
-            maxY2={1200000}
-            Y2Percentage={false}
+            maxY={70000}
             stackedBar={stackedBar}
             line={line}
           />
@@ -126,7 +102,7 @@ const Charts = props => {
             stackedBar={stackedBar}
             line={line}
           /> */}
-		  <StackedBarChart 
+		 {/* <StackedBarChart 
 		    chartName='_Omkostninger per person'
 			chartTitle='Omkostninger per person'
 			selectedScenario={selectedScenario}
@@ -137,25 +113,21 @@ const Charts = props => {
 			maxY={3000} 
 			stackedBar={stackedBar}
             line={line}
-          />
+          /> */}
         </Flex>
       )}
       {props.scenarioSelection.showDifference === true &&
         selectedScenario2 !== "" && (
           <Flex>
-            <StackedBarDiffChart
+			            <StackedBarDiffChart
               chartName="_CO2 emissioner"
-              chartTitle="CO2 emissioner og %-reduktion"
+              chartTitle="CO2 emissioner"
               selectedScenario={selectedScenario}
               selectedScenario2={selectedScenario2}
-              combinedChart={true}
-              label="Kt"
+              combinedChart={false}
+              label="kt CO2e"
               minY={-16000}
               maxY={16000}
-              minY2={-1}
-              maxY2={1}
-              label2="CO2 reduktion (1990)"
-              Y2Percentage={true}
               stackedBar={stackedBar}
               line={line}
             />
@@ -171,34 +143,15 @@ const Charts = props => {
               stackedBar={stackedBar}
               line={line}
             />
-            <StackedBarDiffChart
+			            <StackedBarDiffChart
               chartName="_All_GHG_emissions"
               chartTitle="Alle Danske drivhusgasser"
               selectedScenario={selectedScenario}
               selectedScenario2={selectedScenario2}
-              combinedChart={true}
-              label="Kt CO2e"
+              combinedChart={false}
+              label="kt CO2e"
               minY={-10000}
-              maxY={70000}
-              minY2={0}
-              maxY2={1}
-              label2="Drivhusgas reduktion (1990)"
-              Y2Percentage={true}
-              stackedBar={stackedBar}
-              line={line}
-            />
-            <ComparisonChart
-              chartName="_CO2 emissioner akkumuleret"
-              chartTitle="Akkumuleret CO2 emissioner"
-              selectedScenario={selectedScenario}
-              selectedScenario2={selectedScenario2}
-              combinedChart={true}
-              label="Mt"
-              minY={0}
-              maxY={1200000}
-              minY2={0}
-              maxY2={1200000}
-              Y2Percentage={false}
+              maxY={80000}
               stackedBar={stackedBar}
               line={line}
             />
@@ -226,7 +179,7 @@ const Charts = props => {
               stackedBar={stackedBar}
               line={line}
             />
-            <StackedBarDiffChart
+            {/*  <StackedBarDiffChart
               chartName="_Andel_importeret_Biomasse"
               chartTitle="Andel importeret Biomasse"
               selectedScenario={selectedScenario}
@@ -238,8 +191,8 @@ const Charts = props => {
               YPercentage={true}
               stackedBar={stackedBar}
               line={line}
-            />
-            <StackedBarChart
+            /> */}
+            {/*  <StackedBarChart
               chartName="_Omkostninger per person"
               chartTitle="Omkostninger per person i forhold til reference"
               selectedScenario={selectedScenario}
@@ -250,7 +203,7 @@ const Charts = props => {
               maxY={1}
               stackedBar={stackedBar}
               line={line}
-            />
+            /> */}
           </Flex>
         )}
       <Disqus.DiscussionEmbed shortname="cometsproject" config={disqusConfig} />
