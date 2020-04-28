@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Welcome from "../alert/Welcome";
 import StackedBarChart from "./StackedBarChart";
 import StackedBarDiffChart from "./StackedBarDiffChart";
-import ComparisonChart from "./ComparisonChart";
 import { MainArea, Flex } from "./Charts.style";
 import stackedBar from "../data/stackedBar";
 import line from "../data/line";
