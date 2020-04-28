@@ -9,8 +9,6 @@ Et politikscenario køres uden faste målsætninger, men derimod ved at implemen
 
 I politikscenarier inkluderes hele det danske energi- og bil-afgiftsystem.
 
-Alle scenarier er kørt i 4 versioner, således at betydningen af at tillade CCS teknologier og begrænse importen af biomasse og biobrændsler kan studeres. Dette styres af to knapper i menuen til venstre: Hvis man aktiverer ”CCS tilladt”-knappen, så får modellen mulighed for at investere i CCS teknologier og hvis man aktiverer ”Ingen bio import” så begrænses modellen mulighed for at importerer biomasse og biobrændsler fra 2030. 
-
 Det er vigtigt at forstå forskellen mellem miljømålsætninger, hvilke virkemidler, der kan indfri målsætningerne og de politikker, der skal vedtages i Folketinget for at få virkemidlerne implementeret. Denne forskel har vi forsøgt at illustrere i figuren nedenfor. 
 
 ![figur] (images/figur.png)
