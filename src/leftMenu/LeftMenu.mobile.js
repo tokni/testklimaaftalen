@@ -21,13 +21,6 @@ const MenuLayout = styled.div`
   `}
 `;
 
-const AppLogo = styled.img`
-  width: 100%;
-  height: 100%;
-  margin: 5px;
-  border: 0;
-`;
-
 const MenuHeader = styled.div`
   padding: 5px;
   margin: 0;
@@ -128,9 +121,6 @@ function ScenarioSelectionMenu(props) {
   return (
     <MenuLayout>
       <MenuHeader>
-        <ExternalLink href="http://www.cometsproject.dk">
-          <AppLogo src="/images/logo_comets.png" alt="logo" />
-        </ExternalLink>
         <MenuRoutes>
           <MenuItem
             to="/about"
