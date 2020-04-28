@@ -195,8 +195,8 @@ function ScenarioSelectionMenu(props) {
           showBio={props.scenarioSelection.showBio}
         />
       </ScenarioSelection>
-      <MenuSeparatorLine />
-      <ToggleDifference onClick={e => props.toggleShowCCS(e)}>
+      {/*<MenuSeparatorLine />
+       <ToggleDifference onClick={e => props.toggleShowCCS(e)}>
         <ToggleSwitch
           dimmed={false}
           checked={props.scenarioSelection.showCCS}
@@ -213,8 +213,8 @@ function ScenarioSelectionMenu(props) {
         <ToggleSwitchText selected={props.scenarioSelection.showBio}>
           {t("general.bio")}
         </ToggleSwitchText>
-      </ToggleDifference>
-      <MenuSeparatorLine />
+      </ToggleDifference> 
+      <MenuSeparatorLine />*/}
       <ToggleDifference onClick={e => props.toggleDifference(e)}>
         <ToggleSwitch
           dimmed={props.scenarioSelection.scenarioSelection2 === ""}
