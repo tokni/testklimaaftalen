@@ -58,7 +58,7 @@ export default () => (
     <AboutBody>
       Modellen er udviklet i samarbejde mellem DTU, COMETS projektet og
       Energistyrelsen. Der er et fortsat samarbejde mellem Energistyrelsen og
-      Energy Modelling Club om den løbende udvikling og forbedring af modellen.
+      Energy Modelling Lab om den løbende udvikling og forbedring af modellen.
     </AboutBody>
     <AboutBody>
       Energiforliget 2012 efterspurgte en model, som kunne sammenligne

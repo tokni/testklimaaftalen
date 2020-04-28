@@ -6,40 +6,29 @@ import StackedBarDiffChart from "./StackedBarDiffChart";
 import { MainArea, Flex } from "./Charts.style";
 import stackedBar from "../data/stackedBarTab2";
 import line from "../data/lineTab2";
-import Disqus from "disqus-react";
 
 const Charts = props => {
   const selectedScenario = props.scenarioSelection.scenarioSelection;
   const selectedScenario2 = props.scenarioSelection.scenarioSelection2;
-  const disqusConfig = {
-    url: window.location.href,
-    identifier: "tab2",
-    title: "Hovedresultater"
-  };
 
   return (
     <MainArea>
       {props.scenarioSelection.showWelcome === true && (
         <Welcome closeWelcome={props.closeWelcome} />
       )}
-      <Disqus.CommentCount shortname="cometsproject" config={disqusConfig} />
       {(props.scenarioSelection.showDifference === false ||
         (props.scenarioSelection.showDifference === true &&
           selectedScenario2 === "")) && (
         <Flex>
-          <StackedBarChart
+		            <StackedBarChart
             chartName="_Energi forbrug i Danmark"
             chartTitle="Danmarks samlede energiforbrug og VE-andel"
             selectedScenario={selectedScenario}
             selectedScenario2={selectedScenario2}
-            combinedChart={true}
+            combinedChart={false}
             label="PJ"
             minY={0}
             maxY={1000}
-            minY2={0}
-            maxY2={1}
-            label2="Vedvarende energi andel"
-            Y2Percentage={true}
             stackedBar={stackedBar}
             line={line}            
           />
@@ -79,19 +68,15 @@ const Charts = props => {
             stackedBar={stackedBar}
             line={line}            
           />
-          <StackedBarChart
+		            <StackedBarChart
             chartName="_El netto eksport"
             chartTitle="El-netto-eksport"
             selectedScenario={selectedScenario}
             selectedScenario2={selectedScenario2}
-            combinedChart={true}
+            combinedChart={false}
             label="PJ"
-            label2="Netto eksport (PJ)"
-            minY={-100}
-            maxY={240}
-            minY2={-50}
-            maxY2={120}
-            Y2Percentage={false}
+            minY={0}
+            maxY={200}
             stackedBar={stackedBar}
             line={line}            
           />
@@ -194,19 +179,15 @@ const Charts = props => {
       {props.scenarioSelection.showDifference === true &&
         selectedScenario2 !== "" && (
           <Flex>
-            <StackedBarDiffChart
+			            <StackedBarDiffChart
               chartName="_Energi forbrug i Danmark"
               chartTitle="Energi forbrug i Danmark og VE-andel"
               selectedScenario={selectedScenario}
               selectedScenario2={selectedScenario2}
-              combinedChart={true}
-              label="Kt"
+              combinedChart={false}
+              label="PJ"
               minY={-9000}
               maxY={9000}
-              minY2={-0.16}
-              maxY2={0.16}
-              label2="Vedvarende energi andel"
-              Y2Percentage={true}
               stackedBar={stackedBar}
               line={line}
             />
@@ -246,19 +227,15 @@ const Charts = props => {
               stackedBar={stackedBar}
               line={line}
             />
-            <StackedBarDiffChart
+			            <StackedBarDiffChart
               chartName="_El netto eksport"
               chartTitle="El-netto-eksport"
               selectedScenario={selectedScenario}
               selectedScenario2={selectedScenario2}
-              combinedChart={true}
+              combinedChart={false}
               label="PJ"
-              label2="Netto eksport (PJ)"
               minY={-200}
               maxY={200}
-              minY2={-60}
-              maxY2={60}
-              Y2Percentage={false}
               stackedBar={stackedBar}
               line={line}
             />
@@ -358,7 +335,6 @@ const Charts = props => {
             />
           </Flex>
         )}
-        <Disqus.DiscussionEmbed shortname="cometsproject" config={disqusConfig} />
     </MainArea>
   );
 };

@@ -39,12 +39,6 @@ const MenuHeaderLeft = styled.div`
   align-items: left;
 `;
 
-const TopAppLogo = styled.img`
-  width: 100%;
-  margin-left: 12px;
-  border: 0;
-`;
-
 const AppLogo = styled.img`
   padding: 0px;
   max-width: 160px;
@@ -159,9 +153,6 @@ function ScenarioSelectionMenu(props) {
     <MenuLayout>
       <MenuHeader>
         <MenuHeaderLeft>
-        <ExternalLink href="http://www.cometsproject.dk">
-          <TopAppLogo src="/images/logo_comets.png" alt="logo" />
-        </ExternalLink>
           <MenuRoutes>
             <MenuItem
               to="/about"
@@ -204,8 +195,8 @@ function ScenarioSelectionMenu(props) {
           showBio={props.scenarioSelection.showBio}
         />
       </ScenarioSelection>
-      <MenuSeparatorLine />
-      <ToggleDifference onClick={e => props.toggleShowCCS(e)}>
+      {/*<MenuSeparatorLine />
+       <ToggleDifference onClick={e => props.toggleShowCCS(e)}>
         <ToggleSwitch
           dimmed={false}
           checked={props.scenarioSelection.showCCS}
@@ -222,8 +213,8 @@ function ScenarioSelectionMenu(props) {
         <ToggleSwitchText selected={props.scenarioSelection.showBio}>
           {t("general.bio")}
         </ToggleSwitchText>
-      </ToggleDifference>
-      <MenuSeparatorLine />
+      </ToggleDifference> 
+      <MenuSeparatorLine />*/}
       <ToggleDifference onClick={e => props.toggleDifference(e)}>
         <ToggleSwitch
           dimmed={props.scenarioSelection.scenarioSelection2 === ""}
